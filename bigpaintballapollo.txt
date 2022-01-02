@@ -1,0 +1,253 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local gunmods = Instance.new("TextButton")
+local shields = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+local ctrl = Instance.new("TextButton")
+local tdm = Instance.new("TextButton")
+local ffa = Instance.new("TextButton")
+local esp = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.6057989, 0, 0.334882259, 0)
+Frame.Size = UDim2.new(0, 183, 0, 345)
+Frame.Active = true
+Frame.Draggable = true
+
+
+gunmods.Name = "gunmods"
+gunmods.Parent = Frame
+gunmods.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+gunmods.BorderSizePixel = 0
+gunmods.Position = UDim2.new(0.0450819656, 0, 0.0913862139, 0)
+gunmods.Size = UDim2.new(0, 168, 0, 35)
+gunmods.Font = Enum.Font.SourceSans
+gunmods.Text = "Gun Mods"
+gunmods.TextColor3 = Color3.fromRGB(255, 255, 255)
+gunmods.TextSize = 14.000
+
+shields.Name = "shields"
+shields.Parent = Frame
+shields.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+shields.BorderSizePixel = 0
+shields.Position = UDim2.new(0.0450819656, 0, 0.214071199, 0)
+shields.Size = UDim2.new(0, 168, 0, 37)
+shields.Font = Enum.Font.SourceSans
+shields.Text = "Destroy Spawn Shields"
+shields.TextColor3 = Color3.fromRGB(255, 255, 255)
+shields.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.191256836, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 110, 0, 32)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "BIG Paintball"
+TextLabel.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.TextSize = 15.000
+TextLabel.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = Frame
+exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.0396174826, 0, 0.857610226, 0)
+exit.Size = UDim2.new(0, 168, 0, 35)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+exit.TextSize = 14.000
+
+ctrl.Name = "ctrl"
+ctrl.Parent = Frame
+ctrl.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ctrl.BorderSizePixel = 0
+ctrl.Position = UDim2.new(0.0450819656, 0, 0.342388242, 0)
+ctrl.Size = UDim2.new(0, 168, 0, 34)
+ctrl.Font = Enum.Font.SourceSans
+ctrl.Text = "Ctrl TP"
+ctrl.TextColor3 = Color3.fromRGB(255, 255, 255)
+ctrl.TextSize = 14.000
+
+tdm.Name = "tdm"
+tdm.Parent = Frame
+tdm.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+tdm.BorderSizePixel = 0
+tdm.Position = UDim2.new(0.0450819656, 0, 0.463830352, 0)
+tdm.Size = UDim2.new(0, 168, 0, 38)
+tdm.Font = Enum.Font.SourceSans
+tdm.Text = "TDM"
+tdm.TextColor3 = Color3.fromRGB(255, 255, 255)
+tdm.TextSize = 14.000
+
+ffa.Name = "ffa"
+ffa.Parent = Frame
+ffa.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ffa.BorderSizePixel = 0
+ffa.Position = UDim2.new(0.0450819656, 0, 0.597163677, 0)
+ffa.Size = UDim2.new(0, 168, 0, 38)
+ffa.Font = Enum.Font.SourceSans
+ffa.Text = "FFA"
+ffa.TextColor3 = Color3.fromRGB(255, 255, 255)
+ffa.TextSize = 14.000
+
+esp.Name = "esp"
+esp.Parent = Frame
+esp.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+esp.BorderSizePixel = 0
+esp.Position = UDim2.new(0.0450819656, 0, 0.724699914, 0)
+esp.Size = UDim2.new(0, 168, 0, 38)
+esp.Font = Enum.Font.SourceSans
+esp.Text = "ESP"
+esp.TextColor3 = Color3.fromRGB(255, 255, 255)
+esp.TextSize = 14.000
+
+shields.MouseButton1Click:connect(function()
+	game:GetService("Workspace")["__MAP"].SpawnShields:Destroy()
+end)
+
+gunmods.MouseButton1Click:connect(function()
+	for i, v in next, getgc(true) do
+		if type(v) == "table" and rawget(v, "damage") then
+			v.damage = math.huge
+			v.firerate = 0.000000001
+			v.velocity = 50000
+			v.automatic = true
+			v.additionalspeed = 10
+			v.gadgetDamage = math.huge
+		end
+	end
+end)
+
+esp.MouseButton1Click:connect(function()
+	function WTS(part)
+		local screen = workspace.CurrentCamera:WorldToViewportPoint(part.Position)
+		return Vector2.new(screen.x, screen.y)
+	end
+
+	function ESPText(part, color)
+		local name = Drawing.new("Text")
+		name.Text = part.Parent.Name
+		name.Color = color
+		name.Position = WTS(part)
+		name.Size = 20.0
+		name.Outline = true
+		name.Center = true
+		name.Visible = true
+
+		game:GetService("RunService").Stepped:connect(function()
+			pcall(function()
+				local destroyed = not part:IsDescendantOf(workspace)
+				if destroyed and name ~= nil then
+					name:Remove()
+				end
+				if part ~= nil then
+					name.Position = WTS(part)
+				end
+				local _, screen = workspace.CurrentCamera:WorldToViewportPoint(part.Position)
+				if screen then
+					name.Visible = true
+				else
+					name.Visible = false
+				end
+			end)
+		end)
+	end
+
+	local players = game.Players:getChildren()
+	for i=1,#players do
+		if players[i] ~= game.Players.LocalPlayer then
+			if players[i].Character:findFirstChild("HumanoidRootPart") then
+				ESPText(players[i].Character.HumanoidRootPart, Color3.new(255/255,0/255,0/255))
+			end
+			players[i].CharacterAdded:connect(function(char)
+				local hrp = char:WaitForChild("HumanoidRootPart")
+				ESPText(hrp, Color3.new(255/255,0/255,0/255))
+			end)
+		end
+	end
+
+	game.Players.PlayerAdded:Connect(function(plr)
+		plr.CharacterAdded:connect(function(char)
+			local hrp = char:WaitForChild("HumanoidRootPart")
+			ESPText(hrp, Color3.new(255/255,0/255,0/255))
+		end)
+	end)
+end)
+
+shields.MouseButton1Click:connect(function()
+	while wait() do
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid".WalkSpeed = 50
+	end
+end)
+
+exit.MouseButton1Click:connect(function()
+	Frame.Visible = false
+end)
+
+ffa.MouseButton1Click:connect(function()
+	_G.FFA = true
+	game:GetService('RunService').Stepped:connect(function()
+		game.Players.LocalPlayer.Character:findFirstChildOfClass("Humanoid"):ChangeState(11)
+	end)
+
+	while _G.FFA do
+		for i , v in pairs(game.Players:GetChildren()) do
+			if v ~= game.Players.LocalPlayer and v.Character ~= nil and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.FloorMaterial ~= "Air" then
+				repeat
+					wait()
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Character.HumanoidRootPart.Position + Vector3.new(-5, 20, 0), v.Character.HumanoidRootPart.Position)
+				until v.Character.Humanoid.Health < 1
+			end
+		end
+	end
+end)
+
+tdm.MouseButton1Click:connect(function()
+	_G.TDM = true
+	game:GetService('RunService').Stepped:connect(function()
+		game.Players.LocalPlayer.Character:findFirstChildOfClass("Humanoid"):ChangeState(11)
+	end)
+
+	while _G.TDM do
+		for i , v in pairs(game.Players:GetChildren()) do
+			if v ~= game.Players.LocalPlayer and v.Character ~= nil and v.Character:FindFirstChild("HumanoidRootPart") and v.Team ~= game.Players.LocalPlayer.Team and v.Character.Humanoid.FloorMaterial ~= "Air" then
+				repeat
+					wait()
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Character.HumanoidRootPart.Position + Vector3.new(-5, 20, 0), v.Character.HumanoidRootPart.Position)
+				until v.Character.Humanoid.Health < 1
+			end
+		end
+	end
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "BIG Paintball Killer";
+	Text = "By plantak";
+	Duration = 12;
+})
+
+ctrl.MouseButton1Down:connect(function()
+	local Plr = game:GetService("Players").LocalPlayer
+	local Mouse = Plr:GetMouse()
+
+	Mouse.Button1Down:connect(function()
+		if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+		if not Mouse.Target then return end
+		Plr.Character:MoveTo(Mouse.Hit.p)
+	end)
+end)

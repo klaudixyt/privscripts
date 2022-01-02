@@ -1,0 +1,170 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Hitbox = Instance.new("TextButton")
+local esp = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+local infinitejumo = Instance.new("TextButton")
+local hitboxffa = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.595928431, 0, 0.487272799, 0)
+Frame.Size = UDim2.new(0, 183, 0, 245)
+Frame.Active = true
+Frame.Draggable = true
+
+
+Hitbox.Name = "Hitbox"
+Hitbox.Parent = Frame
+Hitbox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Hitbox.BorderSizePixel = 0
+Hitbox.Position = UDim2.new(0.0396174863, 0, 0.133137912, 0)
+Hitbox.Size = UDim2.new(0, 168, 0, 35)
+Hitbox.Font = Enum.Font.SourceSans
+Hitbox.Text = "Hitbox"
+Hitbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hitbox.TextSize = 14.000
+
+esp.Name = "esp"
+esp.Parent = Frame
+esp.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+esp.BorderSizePixel = 0
+esp.Position = UDim2.new(0.0450819656, 0, 0.300315648, 0)
+esp.Size = UDim2.new(0, 168, 0, 37)
+esp.Font = Enum.Font.SourceSans
+esp.Text = "ESP"
+esp.TextColor3 = Color3.fromRGB(255, 255, 255)
+esp.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.191256836, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 110, 0, 32)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Strucid"
+TextLabel.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.TextSize = 15.000
+TextLabel.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = Frame
+exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.0450819694, 0, 0.8266505, 0)
+exit.Size = UDim2.new(0, 168, 0, 35)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+exit.TextSize = 14.000
+
+infinitejumo.Name = "infinitejumo"
+infinitejumo.Parent = Frame
+infinitejumo.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+infinitejumo.BorderSizePixel = 0
+infinitejumo.Position = UDim2.new(0.0450819694, 0, 0.476064891, 0)
+infinitejumo.Size = UDim2.new(0, 168, 0, 35)
+infinitejumo.Font = Enum.Font.SourceSans
+infinitejumo.Text = "Injfinite Jump"
+infinitejumo.TextColor3 = Color3.fromRGB(255, 255, 255)
+infinitejumo.TextSize = 14.000
+
+hitboxffa.Name = "hitboxffa"
+hitboxffa.Parent = Frame
+hitboxffa.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+hitboxffa.BorderSizePixel = 0
+hitboxffa.Position = UDim2.new(0.0450819656, 0, 0.646321476, 0)
+hitboxffa.Size = UDim2.new(0, 168, 0, 38)
+hitboxffa.Font = Enum.Font.SourceSans
+hitboxffa.Text = "Hitbox For FFA"
+hitboxffa.TextColor3 = Color3.fromRGB(255, 255, 255)
+hitboxffa.TextSize = 14.000
+
+exit.MouseButton1Click:connect(function()
+	Frame.Visible = false
+end)
+
+esp.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/DtLgSkxG", true))()
+end)
+
+infinitejumo.MouseButton1Click:connect(function()
+	local Player = game:GetService'Players'.LocalPlayer;
+	local UIS = game:GetService'UserInputService';
+
+	_G.JumpHeight = 50;
+
+	function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+	UIS.InputBegan:connect(function(UserInput)
+		if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+			Action(Player.Character.Humanoid, function(self)
+				if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+					Action(self.Parent.HumanoidRootPart, function(self)
+						self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+					end)
+				end
+			end)
+		end
+	end)
+end)
+
+Hitbox.MouseButton1Click:connect(function()
+	local plrs = game:GetService("Players")
+	local lplr = plrs.LocalPlayer
+	while wait(.2) do
+		for _, v in pairs(plrs:GetPlayers()) do
+			if tostring(v.Name) ~= tostring(lplr.Name) then
+				if tostring(v.Team) ~= tostring(lplr.Team) then
+					if v.Character ~= nil then
+						for _, b in pairs(v.Character:GetChildren()) do
+							if tostring(b.Name) == "HumanoidRootPart" then
+								b.Size = Vector3.new(15, 15, 15)
+								b.Material = "Neon"
+								b.BrickColor = BrickColor.new("Really blue")
+								b.Transparency = 0.7
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end)
+
+hitboxffa.MouseButton1Click:connect(function()
+	_G.Condition = true
+	while _G.Condition do 
+		_G.HeadSize = 35
+		_G.Disabled = true
+
+		game:GetService('RunService').RenderStepped:connect(function()
+			if _G.Disabled then
+				for i,v in next, game:GetService('Players'):GetPlayers() do
+					if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+						pcall(function()
+							v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+							v.Character.HumanoidRootPart.Transparency = 0.7
+							v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+							v.Character.HumanoidRootPart.Material = "Neon"
+							v.Character.HumanoidRootPart.CanCollide = false
+						end)
+					end
+				end
+			end
+		end)
+		wait(3)
+	end
+end)
