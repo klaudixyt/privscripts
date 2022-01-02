@@ -1,0 +1,25 @@
+if game.PlaceId == 621129760 then
+    wait(1)
+                      loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/katapollo.txt"))()
+end
+
+if game.PlaceId == 3527629287 then
+    wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/bigpaintballapollo.txt"))()
+end
+
+
+if game.PlaceId == 2377868063 then
+	wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/strucidapollo.txt"))()
+end
+
+if game.PlaceId == 185655149 then
+	wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/bloxburgapollo.txt"))()
+end
+
+if game.PlaceId == 1240123653 then
+	wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/zombieattackapolloreal.txt"))()
+end
