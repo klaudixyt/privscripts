@@ -19,7 +19,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.487970412, 0, 0.270303041, 0)
 Frame.Size = UDim2.new(0, 182, 0, 156)
-Frame.Visible = true
+Frame.Active = true
 Frame.Draggable = true
 
 autofarm.Name = "autofarm"
