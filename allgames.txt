@@ -23,3 +23,8 @@ if game.PlaceId == 1240123653 then
 	wait(1)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/zombieattackapolloreal.txt"))()
 end
+
+if game.PlaceId == 537413528 then
+	wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/babft.txt"))()
+end
