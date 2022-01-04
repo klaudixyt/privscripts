@@ -1,0 +1,1316 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local BanditOn = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local ChestTpOff = Instance.new("TextButton")
+local BanditOff = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local SnowBanditsOn = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local TextLabel_11 = Instance.new("TextLabel")
+local TextLabel_12 = Instance.new("TextLabel")
+local TextLabel_13 = Instance.new("TextLabel")
+local SkyBanditsOn = Instance.new("TextButton")
+local SkyBanditsOff = Instance.new("TextButton")
+local ChiefWardeonOff = Instance.new("TextButton")
+local ChiefWardeonOn = Instance.new("TextButton")
+local WardenOff = Instance.new("TextButton")
+local WardenOn = Instance.new("TextButton")
+local DarkMasterOff = Instance.new("TextButton")
+local DarkMasterOn = Instance.new("TextButton")
+local MonkeysOff = Instance.new("TextButton")
+local MonkeysOn = Instance.new("TextButton")
+local GorillaOff = Instance.new("TextButton")
+local GorillaOn = Instance.new("TextButton")
+local MarineCaptainOff = Instance.new("TextButton")
+local ViceAdmiralOff = Instance.new("TextButton")
+local MarineCaptainOn = Instance.new("TextButton")
+local ViceAdmiralOn = Instance.new("TextButton")
+local PrateOff = Instance.new("TextButton")
+local PirateOn = Instance.new("TextButton")
+local YetiOff = Instance.new("TextButton")
+local YetiOn = Instance.new("TextButton")
+local SnowBanditsOff = Instance.new("TextButton")
+local DesertBanditsOff = Instance.new("TextButton")
+local TextLabel_14 = Instance.new("TextLabel")
+local TextLabel_15 = Instance.new("TextLabel")
+local BruteOn = Instance.new("TextButton")
+local DesertBanditsOn = Instance.new("TextButton")
+local BruteOff = Instance.new("TextButton")
+local TextLabel_16 = Instance.new("TextLabel")
+local ChestTpOn = Instance.new("TextButton")
+local Frame3 = Instance.new("Frame")
+local TextLabel_17 = Instance.new("TextLabel")
+local Ice = Instance.new("TextButton")
+local Buggy = Instance.new("TextButton")
+local Pirate = Instance.new("TextButton")
+local Sand = Instance.new("TextButton")
+local Antiafk = Instance.new("TextButton")
+local Marienford = Instance.new("TextButton")
+local Impel = Instance.new("TextButton")
+local Antiafk_2 = Instance.new("TextButton")
+local Louge = Instance.new("TextButton")
+local Sky = Instance.new("TextButton")
+local exitgui = Instance.new("TextButton")
+local Frame2 = Instance.new("Frame")
+local TextLabel_18 = Instance.new("TextLabel")
+local speedbypass = Instance.new("TextButton")
+local TextLabel_19 = Instance.new("TextLabel")
+local autoattackon = Instance.new("TextButton")
+local autoattackoff = Instance.new("TextButton")
+local infinitejump = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0913016647, 0, 0.0948822796, 0)
+Frame.Size = UDim2.new(0, 183, 0, 552)
+Frame.Active = true
+Frame.Draggable = true
+Frame2.Active = true
+Frame2.Draggable = true
+Frame3.Active = true
+Frame3.Draggable = true
+
+BanditOn.Name = "BanditOn"
+BanditOn.Parent = Frame
+BanditOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+BanditOn.BorderSizePixel = 0
+BanditOn.Position = UDim2.new(0.596994638, 0, 0.0570375547, 0)
+BanditOn.Size = UDim2.new(0, 29, 0, 26)
+BanditOn.Font = Enum.Font.SourceSans
+BanditOn.Text = "ON"
+BanditOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+BanditOn.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.191256836, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 110, 0, 31)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Farming"
+TextLabel.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.TextSize = 17.000
+TextLabel.TextWrapped = true
+
+ChestTpOff.Name = "ChestTpOff"
+ChestTpOff.Parent = Frame
+ChestTpOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ChestTpOff.BorderSizePixel = 0
+ChestTpOff.Position = UDim2.new(0.799180448, 0, 0.930778623, 0)
+ChestTpOff.Size = UDim2.new(0, 29, 0, 26)
+ChestTpOff.Font = Enum.Font.SourceSans
+ChestTpOff.Text = "OFF"
+ChestTpOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+ChestTpOff.TextSize = 14.000
+ChestTpOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+BanditOff.Name = "BanditOff"
+BanditOff.Parent = Frame
+BanditOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+BanditOff.BorderSizePixel = 0
+BanditOff.Position = UDim2.new(0.799180448, 0, 0.0570375547, 0)
+BanditOff.Size = UDim2.new(0, 29, 0, 26)
+BanditOff.Font = Enum.Font.SourceSans
+BanditOff.Text = "OFF"
+BanditOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+BanditOff.TextSize = 14.000
+BanditOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0765027329, 0, 0.0570375547, 0)
+TextLabel_2.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Bandit"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
+TextLabel_2.TextWrapped = true
+
+SnowBanditsOn.Name = "SnowBanditsOn"
+SnowBanditsOn.Parent = Frame
+SnowBanditsOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SnowBanditsOn.BorderSizePixel = 0
+SnowBanditsOn.Position = UDim2.new(0.596994638, 0, 0.177155435, 0)
+SnowBanditsOn.Size = UDim2.new(0, 29, 0, 26)
+SnowBanditsOn.Font = Enum.Font.SourceSans
+SnowBanditsOn.Text = "ON"
+SnowBanditsOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+SnowBanditsOn.TextSize = 14.000
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0765027329, 0, 0.742536664, 0)
+TextLabel_3.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Gorilla"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 15.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0765027329, 0, 0.674739957, 0)
+TextLabel_4.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Monkeys"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 15.000
+TextLabel_4.TextWrapped = true
+
+TextLabel_5.Parent = Frame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.0765027329, 0, 0.608826637, 0)
+TextLabel_5.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Dark Master"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 15.000
+TextLabel_5.TextWrapped = true
+
+TextLabel_6.Parent = Frame
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.0765027329, 0, 0.544796467, 0)
+TextLabel_6.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Warden"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 15.000
+TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = Frame
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.0765027329, 0, 0.484532833, 0)
+TextLabel_7.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Chief Warden"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 15.000
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = Frame
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.0765027329, 0, 0.420502722, 0)
+TextLabel_8.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Sky Bandits"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 15.000
+TextLabel_8.TextWrapped = true
+
+TextLabel_9.Parent = Frame
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.0765027329, 0, 0.362122297, 0)
+TextLabel_9.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "Brute"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 15.000
+TextLabel_9.TextWrapped = true
+
+TextLabel_10.Parent = Frame
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.0765027329, 0, 0.301858664, 0)
+TextLabel_10.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "Desert Band"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 15.000
+TextLabel_10.TextWrapped = true
+
+TextLabel_11.Parent = Frame
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.0765027329, 0, 0.241595, 0)
+TextLabel_11.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "Yeti Farm"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextSize = 15.000
+TextLabel_11.TextWrapped = true
+
+TextLabel_12.Parent = Frame
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.BorderSizePixel = 0
+TextLabel_12.Position = UDim2.new(0.0765027329, 0, 0.179448098, 0)
+TextLabel_12.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_12.Font = Enum.Font.SourceSans
+TextLabel_12.Text = "Snow Bandits"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextSize = 15.000
+TextLabel_12.TextWrapped = true
+
+TextLabel_13.Parent = Frame
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.BorderSizePixel = 0
+TextLabel_13.Position = UDim2.new(0.0765027329, 0, 0.119184442, 0)
+TextLabel_13.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_13.Font = Enum.Font.SourceSans
+TextLabel_13.Text = "Pirate"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextSize = 15.000
+TextLabel_13.TextWrapped = true
+
+SkyBanditsOn.Name = "SkyBanditsOn"
+SkyBanditsOn.Parent = Frame
+SkyBanditsOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SkyBanditsOn.BorderSizePixel = 0
+SkyBanditsOn.Position = UDim2.new(0.596994638, 0, 0.41990906, 0)
+SkyBanditsOn.Size = UDim2.new(0, 29, 0, 26)
+SkyBanditsOn.Font = Enum.Font.SourceSans
+SkyBanditsOn.Text = "ON"
+SkyBanditsOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+SkyBanditsOn.TextSize = 14.000
+
+SkyBanditsOff.Name = "SkyBanditsOff"
+SkyBanditsOff.Parent = Frame
+SkyBanditsOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SkyBanditsOff.BorderSizePixel = 0
+SkyBanditsOff.Position = UDim2.new(0.799180448, 0, 0.41990906, 0)
+SkyBanditsOff.Size = UDim2.new(0, 29, 0, 26)
+SkyBanditsOff.Font = Enum.Font.SourceSans
+SkyBanditsOff.Text = "OFF"
+SkyBanditsOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+SkyBanditsOff.TextSize = 14.000
+SkyBanditsOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+ChiefWardeonOff.Name = "ChiefWardeonOff"
+ChiefWardeonOff.Parent = Frame
+ChiefWardeonOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ChiefWardeonOff.BorderSizePixel = 0
+ChiefWardeonOff.Position = UDim2.new(0.78825146, 0, 0.483314872, 0)
+ChiefWardeonOff.Size = UDim2.new(0, 29, 0, 26)
+ChiefWardeonOff.Font = Enum.Font.SourceSans
+ChiefWardeonOff.Text = "OFF"
+ChiefWardeonOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+ChiefWardeonOff.TextSize = 14.000
+ChiefWardeonOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+ChiefWardeonOn.Name = "ChiefWardeonOn"
+ChiefWardeonOn.Parent = Frame
+ChiefWardeonOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ChiefWardeonOn.BorderSizePixel = 0
+ChiefWardeonOn.Position = UDim2.new(0.596994638, 0, 0.483314872, 0)
+ChiefWardeonOn.Size = UDim2.new(0, 29, 0, 26)
+ChiefWardeonOn.Font = Enum.Font.SourceSans
+ChiefWardeonOn.Text = "ON"
+ChiefWardeonOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+ChiefWardeonOn.TextSize = 14.000
+
+WardenOff.Name = "WardenOff"
+WardenOff.Parent = Frame
+WardenOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+WardenOff.BorderSizePixel = 0
+WardenOff.Position = UDim2.new(0.799180448, 0, 0.543097496, 0)
+WardenOff.Size = UDim2.new(0, 29, 0, 26)
+WardenOff.Font = Enum.Font.SourceSans
+WardenOff.Text = "OFF"
+WardenOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+WardenOff.TextSize = 14.000
+WardenOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+WardenOn.Name = "WardenOn"
+WardenOn.Parent = Frame
+WardenOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+WardenOn.BorderSizePixel = 0
+WardenOn.Position = UDim2.new(0.596994638, 0, 0.543097496, 0)
+WardenOn.Size = UDim2.new(0, 29, 0, 26)
+WardenOn.Font = Enum.Font.SourceSans
+WardenOn.Text = "ON"
+WardenOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+WardenOn.TextSize = 14.000
+
+DarkMasterOff.Name = "DarkMasterOff"
+DarkMasterOff.Parent = Frame
+DarkMasterOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DarkMasterOff.BorderSizePixel = 0
+DarkMasterOff.Position = UDim2.new(0.799180448, 0, 0.608314872, 0)
+DarkMasterOff.Size = UDim2.new(0, 29, 0, 26)
+DarkMasterOff.Font = Enum.Font.SourceSans
+DarkMasterOff.Text = "OFF"
+DarkMasterOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+DarkMasterOff.TextSize = 14.000
+DarkMasterOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+DarkMasterOn.Name = "DarkMasterOn"
+DarkMasterOn.Parent = Frame
+DarkMasterOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DarkMasterOn.BorderSizePixel = 0
+DarkMasterOn.Position = UDim2.new(0.596994638, 0, 0.608314872, 0)
+DarkMasterOn.Size = UDim2.new(0, 29, 0, 26)
+DarkMasterOn.Font = Enum.Font.SourceSans
+DarkMasterOn.Text = "ON"
+DarkMasterOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+DarkMasterOn.TextSize = 14.000
+
+MonkeysOff.Name = "MonkeysOff"
+MonkeysOff.Parent = Frame
+MonkeysOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MonkeysOff.BorderSizePixel = 0
+MonkeysOff.Position = UDim2.new(0.799180448, 0, 0.673532248, 0)
+MonkeysOff.Size = UDim2.new(0, 29, 0, 26)
+MonkeysOff.Font = Enum.Font.SourceSans
+MonkeysOff.Text = "OFF"
+MonkeysOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+MonkeysOff.TextSize = 14.000
+MonkeysOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+MonkeysOn.Name = "MonkeysOn"
+MonkeysOn.Parent = Frame
+MonkeysOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MonkeysOn.BorderSizePixel = 0
+MonkeysOn.Position = UDim2.new(0.596994638, 0, 0.673532248, 0)
+MonkeysOn.Size = UDim2.new(0, 29, 0, 26)
+MonkeysOn.Font = Enum.Font.SourceSans
+MonkeysOn.Text = "ON"
+MonkeysOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+MonkeysOn.TextSize = 14.000
+
+GorillaOff.Name = "GorillaOff"
+GorillaOff.Parent = Frame
+GorillaOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+GorillaOff.BorderSizePixel = 0
+GorillaOff.Position = UDim2.new(0.799180448, 0, 0.740561247, 0)
+GorillaOff.Size = UDim2.new(0, 29, 0, 26)
+GorillaOff.Font = Enum.Font.SourceSans
+GorillaOff.Text = "OFF"
+GorillaOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+GorillaOff.TextSize = 14.000
+GorillaOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+GorillaOn.Name = "GorillaOn"
+GorillaOn.Parent = Frame
+GorillaOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+GorillaOn.BorderSizePixel = 0
+GorillaOn.Position = UDim2.new(0.596994638, 0, 0.740561247, 0)
+GorillaOn.Size = UDim2.new(0, 29, 0, 26)
+GorillaOn.Font = Enum.Font.SourceSans
+GorillaOn.Text = "ON"
+GorillaOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+GorillaOn.TextSize = 14.000
+
+MarineCaptainOff.Name = "MarineCaptainOff"
+MarineCaptainOff.Parent = Frame
+MarineCaptainOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MarineCaptainOff.BorderSizePixel = 0
+MarineCaptainOff.Position = UDim2.new(0.799180448, 0, 0.805778623, 0)
+MarineCaptainOff.Size = UDim2.new(0, 29, 0, 26)
+MarineCaptainOff.Font = Enum.Font.SourceSans
+MarineCaptainOff.Text = "OFF"
+MarineCaptainOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+MarineCaptainOff.TextSize = 14.000
+MarineCaptainOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+ViceAdmiralOff.Name = "ViceAdmiralOff"
+ViceAdmiralOff.Parent = Frame
+ViceAdmiralOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ViceAdmiralOff.BorderSizePixel = 0
+ViceAdmiralOff.Position = UDim2.new(0.799180448, 0, 0.870995998, 0)
+ViceAdmiralOff.Size = UDim2.new(0, 29, 0, 26)
+ViceAdmiralOff.Font = Enum.Font.SourceSans
+ViceAdmiralOff.Text = "OFF"
+ViceAdmiralOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+ViceAdmiralOff.TextSize = 14.000
+ViceAdmiralOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+MarineCaptainOn.Name = "MarineCaptainOn"
+MarineCaptainOn.Parent = Frame
+MarineCaptainOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MarineCaptainOn.BorderSizePixel = 0
+MarineCaptainOn.Position = UDim2.new(0.596994638, 0, 0.805778623, 0)
+MarineCaptainOn.Size = UDim2.new(0, 29, 0, 26)
+MarineCaptainOn.Font = Enum.Font.SourceSans
+MarineCaptainOn.Text = "ON"
+MarineCaptainOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+MarineCaptainOn.TextSize = 14.000
+
+ViceAdmiralOn.Name = "ViceAdmiralOn"
+ViceAdmiralOn.Parent = Frame
+ViceAdmiralOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ViceAdmiralOn.BorderSizePixel = 0
+ViceAdmiralOn.Position = UDim2.new(0.596994638, 0, 0.870995998, 0)
+ViceAdmiralOn.Size = UDim2.new(0, 29, 0, 26)
+ViceAdmiralOn.Font = Enum.Font.SourceSans
+ViceAdmiralOn.Text = "ON"
+ViceAdmiralOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+ViceAdmiralOn.TextSize = 14.000
+
+PrateOff.Name = "PrateOff"
+PrateOff.Parent = Frame
+PrateOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PrateOff.BorderSizePixel = 0
+PrateOff.Position = UDim2.new(0.799180448, 0, 0.119184442, 0)
+PrateOff.Size = UDim2.new(0, 29, 0, 26)
+PrateOff.Font = Enum.Font.SourceSans
+PrateOff.Text = "OFF"
+PrateOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+PrateOff.TextSize = 14.000
+PrateOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+PirateOn.Name = "PirateOn"
+PirateOn.Parent = Frame
+PirateOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PirateOn.BorderSizePixel = 0
+PirateOn.Position = UDim2.new(0.596994638, 0, 0.119184442, 0)
+PirateOn.Size = UDim2.new(0, 29, 0, 26)
+PirateOn.Font = Enum.Font.SourceSans
+PirateOn.Text = "ON"
+PirateOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+PirateOn.TextSize = 14.000
+
+YetiOff.Name = "YetiOff"
+YetiOff.Parent = Frame
+YetiOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+YetiOff.BorderSizePixel = 0
+YetiOff.Position = UDim2.new(0.799180448, 0, 0.239711761, 0)
+YetiOff.Size = UDim2.new(0, 29, 0, 26)
+YetiOff.Font = Enum.Font.SourceSans
+YetiOff.Text = "OFF"
+YetiOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+YetiOff.TextSize = 14.000
+YetiOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+YetiOn.Name = "YetiOn"
+YetiOn.Parent = Frame
+YetiOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+YetiOn.BorderSizePixel = 0
+YetiOn.Position = UDim2.new(0.596994638, 0, 0.239711761, 0)
+YetiOn.Size = UDim2.new(0, 29, 0, 26)
+YetiOn.Font = Enum.Font.SourceSans
+YetiOn.Text = "ON"
+YetiOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+YetiOn.TextSize = 14.000
+
+SnowBanditsOff.Name = "SnowBanditsOff"
+SnowBanditsOff.Parent = Frame
+SnowBanditsOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SnowBanditsOff.BorderSizePixel = 0
+SnowBanditsOff.Position = UDim2.new(0.799180448, 0, 0.177155435, 0)
+SnowBanditsOff.Size = UDim2.new(0, 29, 0, 26)
+SnowBanditsOff.Font = Enum.Font.SourceSans
+SnowBanditsOff.Text = "OFF"
+SnowBanditsOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+SnowBanditsOff.TextSize = 14.000
+SnowBanditsOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+DesertBanditsOff.Name = "DesertBanditsOff"
+DesertBanditsOff.Parent = Frame
+DesertBanditsOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DesertBanditsOff.BorderSizePixel = 0
+DesertBanditsOff.Position = UDim2.new(0.799180448, 0, 0.298532248, 0)
+DesertBanditsOff.Size = UDim2.new(0, 29, 0, 26)
+DesertBanditsOff.Font = Enum.Font.SourceSans
+DesertBanditsOff.Text = "OFF"
+DesertBanditsOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+DesertBanditsOff.TextSize = 14.000
+DesertBanditsOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+TextLabel_14.Parent = Frame
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0.0765027329, 0, 0.808449984, 0)
+TextLabel_14.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = "Marine Cap"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 15.000
+TextLabel_14.TextWrapped = true
+
+TextLabel_15.Parent = Frame
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(0.0765027329, 0, 0.872336805, 0)
+TextLabel_15.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_15.Font = Enum.Font.SourceSans
+TextLabel_15.Text = "Vice Admiral"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextSize = 15.000
+TextLabel_15.TextWrapped = true
+
+BruteOn.Name = "BruteOn"
+BruteOn.Parent = Frame
+BruteOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+BruteOn.BorderSizePixel = 0
+BruteOn.Position = UDim2.new(0.596994638, 0, 0.360126466, 0)
+BruteOn.Size = UDim2.new(0, 29, 0, 26)
+BruteOn.Font = Enum.Font.SourceSans
+BruteOn.Text = "ON"
+BruteOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+BruteOn.TextSize = 14.000
+
+DesertBanditsOn.Name = "DesertBanditsOn"
+DesertBanditsOn.Parent = Frame
+DesertBanditsOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DesertBanditsOn.BorderSizePixel = 0
+DesertBanditsOn.Position = UDim2.new(0.596994638, 0, 0.298532248, 0)
+DesertBanditsOn.Size = UDim2.new(0, 29, 0, 26)
+DesertBanditsOn.Font = Enum.Font.SourceSans
+DesertBanditsOn.Text = "ON"
+DesertBanditsOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+DesertBanditsOn.TextSize = 14.000
+
+BruteOff.Name = "BruteOff"
+BruteOff.Parent = Frame
+BruteOff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+BruteOff.BorderSizePixel = 0
+BruteOff.Position = UDim2.new(0.799180448, 0, 0.360126466, 0)
+BruteOff.Size = UDim2.new(0, 29, 0, 26)
+BruteOff.Font = Enum.Font.SourceSans
+BruteOff.Text = "OFF"
+BruteOff.TextColor3 = Color3.fromRGB(255, 0, 0)
+BruteOff.TextSize = 14.000
+BruteOff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+TextLabel_16.Parent = Frame
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.BorderSizePixel = 0
+TextLabel_16.Position = UDim2.new(0.0765027329, 0, 0.933930993, 0)
+TextLabel_16.Size = UDim2.new(0, 81, 0, 25)
+TextLabel_16.Font = Enum.Font.SourceSans
+TextLabel_16.Text = "TpToChests"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextSize = 15.000
+TextLabel_16.TextWrapped = true
+
+ChestTpOn.Name = "ChestTpOn"
+ChestTpOn.Parent = Frame
+ChestTpOn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ChestTpOn.BorderSizePixel = 0
+ChestTpOn.Position = UDim2.new(0.596994638, 0, 0.930778623, 0)
+ChestTpOn.Size = UDim2.new(0, 29, 0, 26)
+ChestTpOn.Font = Enum.Font.SourceSans
+ChestTpOn.Text = "ON"
+ChestTpOn.TextColor3 = Color3.fromRGB(85, 255, 0)
+ChestTpOn.TextSize = 14.000
+
+Frame3.Name = "Frame3"
+Frame3.Parent = ScreenGui
+Frame3.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame3.BorderSizePixel = 0
+Frame3.Position = UDim2.new(0.345007777, 0, 0.0943562984, 0)
+Frame3.Size = UDim2.new(0, 183, 0, 427)
+
+TextLabel_17.Parent = Frame3
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.BorderSizePixel = 0
+TextLabel_17.Position = UDim2.new(0.196721315, 0, 0, 0)
+TextLabel_17.Size = UDim2.new(0, 110, 0, 31)
+TextLabel_17.Font = Enum.Font.SourceSans
+TextLabel_17.Text = "Teleport"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel_17.TextSize = 17.000
+TextLabel_17.TextWrapped = true
+
+Ice.Name = "Ice"
+Ice.Parent = Frame3
+Ice.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Ice.BorderSizePixel = 0
+Ice.Position = UDim2.new(0.132513672, 0, 0.0741023496, 0)
+Ice.Size = UDim2.new(0, 131, 0, 25)
+Ice.Font = Enum.Font.SourceSans
+Ice.Text = "Ice Island"
+Ice.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ice.TextSize = 14.000
+
+Buggy.Name = "Buggy"
+Buggy.Parent = Frame3
+Buggy.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Buggy.BorderSizePixel = 0
+Buggy.Position = UDim2.new(0.137978151, 0, 0.150191694, 0)
+Buggy.Size = UDim2.new(0, 131, 0, 25)
+Buggy.Font = Enum.Font.SourceSans
+Buggy.Text = "Buggy Island"
+Buggy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Buggy.TextSize = 14.000
+
+Pirate.Name = "Pirate"
+Pirate.Parent = Frame3
+Pirate.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Pirate.BorderSizePixel = 0
+Pirate.Position = UDim2.new(0.137978151, 0, 0.228148013, 0)
+Pirate.Size = UDim2.new(0, 131, 0, 25)
+Pirate.Font = Enum.Font.SourceSans
+Pirate.Text = "Pirate Main"
+Pirate.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pirate.TextSize = 14.000
+
+Sand.Name = "Sand"
+Sand.Parent = Frame3
+Sand.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sand.BorderSizePixel = 0
+Sand.Position = UDim2.new(0.137978241, 0, 0.461455613, 0)
+Sand.Size = UDim2.new(0, 131, 0, 25)
+Sand.Font = Enum.Font.SourceSans
+Sand.Text = "Sand Island"
+Sand.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sand.TextSize = 14.000
+
+Antiafk.Name = "Antiafk"
+Antiafk.Parent = Frame3
+Antiafk.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Antiafk.BorderSizePixel = 0
+Antiafk.Position = UDim2.new(0.137978315, 0, 0.542638063, 0)
+Antiafk.Size = UDim2.new(0, 131, 0, 25)
+Antiafk.Font = Enum.Font.SourceSans
+Antiafk.Text = "Marine Main"
+Antiafk.TextColor3 = Color3.fromRGB(255, 255, 255)
+Antiafk.TextSize = 14.000
+
+Marienford.Name = "Marienford"
+Marienford.Parent = Frame3
+Marienford.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Marienford.BorderSizePixel = 0
+Marienford.Position = UDim2.new(0.137978122, 0, 0.622113943, 0)
+Marienford.Size = UDim2.new(0, 131, 0, 25)
+Marienford.Font = Enum.Font.SourceSans
+Marienford.Text = "Marine Ford"
+Marienford.TextColor3 = Color3.fromRGB(255, 255, 255)
+Marienford.TextSize = 14.000
+
+Impel.Name = "Impel"
+Impel.Parent = Frame3
+Impel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Impel.BorderSizePixel = 0
+Impel.Position = UDim2.new(0.137978196, 0, 0.701190948, 0)
+Impel.Size = UDim2.new(0, 131, 0, 25)
+Impel.Font = Enum.Font.SourceSans
+Impel.Text = "Impel Down"
+Impel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Impel.TextSize = 14.000
+
+Antiafk_2.Name = "Antiafk"
+Antiafk_2.Parent = Frame3
+Antiafk_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Antiafk_2.BorderSizePixel = 0
+Antiafk_2.Position = UDim2.new(1.29644811, 0, 1.91800547, 0)
+Antiafk_2.Size = UDim2.new(0, 131, 0, 25)
+Antiafk_2.Font = Enum.Font.SourceSans
+Antiafk_2.Text = "Anti AFK"
+Antiafk_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Antiafk_2.TextSize = 14.000
+
+Louge.Name = "Louge"
+Louge.Parent = Frame3
+Louge.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Louge.BorderSizePixel = 0
+Louge.Position = UDim2.new(0.137978151, 0, 0.307647973, 0)
+Louge.Size = UDim2.new(0, 131, 0, 25)
+Louge.Font = Enum.Font.SourceSans
+Louge.Text = "Louge Town"
+Louge.TextColor3 = Color3.fromRGB(255, 255, 255)
+Louge.TextSize = 14.000
+
+Sky.Name = "Sky"
+Sky.Parent = Frame3
+Sky.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sky.BorderSizePixel = 0
+Sky.Position = UDim2.new(0.137978241, 0, 0.383885711, 0)
+Sky.Size = UDim2.new(0, 131, 0, 25)
+Sky.Font = Enum.Font.SourceSans
+Sky.Text = "Sky Island"
+Sky.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sky.TextSize = 14.000
+
+exitgui.Name = "exitgui"
+exitgui.Parent = Frame3
+exitgui.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+exitgui.BorderColor3 = Color3.fromRGB(255, 255, 255)
+exitgui.Position = UDim2.new(0.137978137, 0, 0.907279968, 0)
+exitgui.Size = UDim2.new(0, 131, 0, 29)
+exitgui.Font = Enum.Font.SourceSans
+exitgui.Text = "Exit GUI"
+exitgui.TextColor3 = Color3.fromRGB(255, 255, 255)
+exitgui.TextSize = 14.000
+
+Frame2.Name = "Frame2"
+Frame2.Parent = ScreenGui
+Frame2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame2.BorderSizePixel = 0
+Frame2.Position = UDim2.new(0.217149913, 0, 0.0948823094, 0)
+Frame2.Size = UDim2.new(0, 183, 0, 188)
+
+TextLabel_18.Parent = Frame2
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.BorderSizePixel = 0
+TextLabel_18.Position = UDim2.new(0.196721315, 0, 0, 0)
+TextLabel_18.Size = UDim2.new(0, 110, 0, 30)
+TextLabel_18.Font = Enum.Font.SourceSans
+TextLabel_18.Text = "Interaction"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel_18.TextSize = 17.000
+TextLabel_18.TextWrapped = true
+
+speedbypass.Name = "speedbypass"
+speedbypass.Parent = Frame2
+speedbypass.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+speedbypass.BorderSizePixel = 0
+speedbypass.Position = UDim2.new(0.137978151, 0, 0.333633304, 0)
+speedbypass.Size = UDim2.new(0, 131, 0, 25)
+speedbypass.Font = Enum.Font.SourceSans
+speedbypass.Text = "Speed (Press Q After)"
+speedbypass.TextColor3 = Color3.fromRGB(255, 255, 255)
+speedbypass.TextSize = 14.000
+
+TextLabel_19.Parent = Frame2
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.BackgroundTransparency = 1.000
+TextLabel_19.BorderSizePixel = 0
+TextLabel_19.Position = UDim2.new(0.136612028, 0, 0.168739676, 0)
+TextLabel_19.Size = UDim2.new(0, 62, 0, 25)
+TextLabel_19.Font = Enum.Font.SourceSans
+TextLabel_19.Text = "AutoAttack"
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextSize = 15.000
+TextLabel_19.TextWrapped = true
+
+autoattackon.Name = "autoattackon"
+autoattackon.Parent = Frame2
+autoattackon.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+autoattackon.BorderSizePixel = 0
+autoattackon.Position = UDim2.new(0.575136721, 0, 0.163420528, 0)
+autoattackon.Size = UDim2.new(0, 29, 0, 26)
+autoattackon.Font = Enum.Font.SourceSans
+autoattackon.Text = "ON"
+autoattackon.TextColor3 = Color3.fromRGB(85, 255, 0)
+autoattackon.TextSize = 14.000
+
+autoattackoff.Name = "autoattackoff"
+autoattackoff.Parent = Frame2
+autoattackoff.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+autoattackoff.BorderSizePixel = 0
+autoattackoff.Position = UDim2.new(0.777322531, 0, 0.163420528, 0)
+autoattackoff.Size = UDim2.new(0, 29, 0, 26)
+autoattackoff.Font = Enum.Font.SourceSans
+autoattackoff.Text = "OFF"
+autoattackoff.TextColor3 = Color3.fromRGB(255, 0, 0)
+autoattackoff.TextSize = 14.000
+autoattackoff.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+infinitejump.Name = "infinitejump"
+infinitejump.Parent = Frame2
+infinitejump.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+infinitejump.BorderSizePixel = 0
+infinitejump.Position = UDim2.new(0.132513672, 0, 0.509165227, 0)
+infinitejump.Size = UDim2.new(0, 131, 0, 25)
+infinitejump.Font = Enum.Font.SourceSans
+infinitejump.Text = "Infinite Jump"
+infinitejump.TextColor3 = Color3.fromRGB(255, 255, 255)
+infinitejump.TextSize = 14.000
+
+infinitejump.MouseButton1Down:connect(function()
+	local Player = game:GetService'Players'.LocalPlayer;
+	local UIS = game:GetService'UserInputService';
+
+	_G.JumpHeight = 50;
+
+	function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+	UIS.InputBegan:connect(function(UserInput)
+		if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+			Action(Player.Character.Humanoid, function(self)
+				if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+					Action(self.Parent.HumanoidRootPart, function(self)
+						self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+					end)
+				end
+			end)
+		end
+	end)
+end)
+
+
+autoattackon.MouseButton1Down:connect(function()
+	_G.Click = true
+	local VirtualUser=game:service'VirtualUser'
+	while _G.Click do
+		wait()
+		VirtualUser:CaptureController()
+		VirtualUser:ClickButton1(Vector2.new(0,0))
+	end
+end)
+
+autoattackoff.MouseButton1Down:connect(function()
+	_G.Click = false
+end)
+
+exitgui.MouseButton1Down:connect(function()
+	Frame2.Visible = false
+	Frame3.Visible = false
+	Frame.Visible = false
+end)
+
+speedbypass.MouseButton1Down:connect(function()
+	down = false
+	velocity = Instance.new("BodyVelocity")
+	velocity.maxForce = Vector3.new(100000, 0, 100000)
+	---vv Use that to change the speed v
+	local speed = 150
+	gyro = Instance.new("BodyGyro")
+	gyro.maxTorque = Vector3.new(100000, 0, 100000)
+
+	local hum = game.Players.LocalPlayer.Character.Humanoid
+
+	function onButton1Down(mouse)
+		down = true
+		velocity.Parent = game.Players.LocalPlayer.Character.UpperTorso
+		velocity.velocity = (hum.MoveDirection) * speed
+		gyro.Parent = game.Players.LocalPlayer.Character.UpperTorso
+		while down do
+			if not down then break end
+			velocity.velocity = (hum.MoveDirection) * speed
+			local refpos = gyro.Parent.Position + (gyro.Parent.Position - workspace.CurrentCamera.CoordinateFrame.p).unit * 5
+			gyro.cframe = CFrame.new(gyro.Parent.Position, Vector3.new(refpos.x, gyro.Parent.Position.y, refpos.z))
+			wait(0.1)
+		end
+	end
+
+	function onButton1Up(mouse)
+		velocity.Parent = nil
+		gyro.Parent = nil
+		down = false
+	end
+	--To Change the key in those 2 lines, replace the "q" with your desired key
+	function onSelected(mouse)
+		mouse.KeyDown:connect(function(k) if k:lower()=="q"then onButton1Down(mouse)end end)
+		mouse.KeyUp:connect(function(k) if k:lower()=="q"then onButton1Up(mouse)end end)
+	end
+
+	onSelected(game.Players.LocalPlayer:GetMouse())
+end)
+
+
+Ice.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1389, 93, -1337)
+end)
+
+Sand.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(901, 10, 4382)
+end)
+
+Sky.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4800, 722, -2561)
+end)
+
+Pirate.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1056, 23, 1439)
+end)
+
+Buggy.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1277, 16, 4290)
+end)
+
+Marienford.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4962, 25, 4245)
+end)
+
+Antiafk.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2651, 12, 2069)
+end)
+
+Louge.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-628, 8, 1662)
+end)
+
+Impel.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5302, 91, 750)
+end)
+
+PirateOn.MouseButton1Click:connect(function()
+	_G.farm = true
+	while _G.farm do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Pirate [Lv. 35]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm == false
+				end
+			end
+		end
+	end
+
+end)
+
+PrateOff.MouseButton1Click:connect(function()
+	_G.farm = false
+
+end)
+
+BruteOn.MouseButton1Click:connect(function()
+	_G.farm2 = true
+	while _G.farm2 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Brute [Lv. 45]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm2 == false
+				end
+			end
+		end
+	end
+
+end)
+
+BruteOff.MouseButton1Click:connect(function()
+	_G.farm2 = false
+
+end)
+
+SnowBanditsOff.MouseButton1Click:connect(function()
+	_G.farm3 = false
+
+end)
+
+SnowBanditsOn.MouseButton1Click:connect(function()
+	_G.farm3 = true
+	while _G.farm3 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Snow Bandit [Lv. 90]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm3 == false
+				end
+			end
+		end
+	end
+
+end)
+
+YetiOn.MouseButton1Click:connect(function()
+	_G.farm5 = true
+	while _G.farm5 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Yeti [Lv. 100] [Boss]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm5 == false
+				end
+			end
+		end
+	end
+
+end)
+
+YetiOff.MouseButton1Click:connect(function()
+	_G.farm5 = false
+
+end)
+
+SkyBanditsOn.MouseButton1Click:connect(function()
+	_G.farm6 = true
+	while _G.farm6 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Sky Bandit [Lv. 150]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm6 == false
+				end
+			end
+		end
+	end
+
+end)
+
+SkyBanditsOff.MouseButton1Click:connect(function()
+	_G.farm6 = false
+
+end)
+
+DarkMasterOn.MouseButton1Click:connect(function()
+	_G.farm7 = true
+	while _G.farm7 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Dark Master [Lv. 160]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm7 == false
+				end
+			end
+		end
+	end
+
+end)
+
+DarkMasterOff.MouseButton1Click:connect(function()
+	_G.farm7 = false
+
+end)
+
+DesertBanditsOn.MouseButton1Click:connect(function()
+	_G.farm8 = true
+	while _G.farm8 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Desert Bandit [Lv. 60]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm8 == false
+				end
+			end
+		end
+	end
+
+end)
+
+DesertBanditsOff.MouseButton1Click:connect(function()
+	_G.farm8 = false
+
+end)
+
+WardenOn.MouseButton1Click:connect(function()
+	_G.farm10 = true
+	while _G.farm10 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Warden [Lv. 175]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm10 == false
+				end
+			end
+		end
+	end
+
+end)
+
+WardenOff.MouseButton1Click:connect(function()
+	_G.farm10 = false
+
+end)
+
+ChiefWardeonOn.MouseButton1Click:connect(function()
+	_G.farm11 = true
+	while _G.farm11 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Chief Warden [Lv. 200] [Boss]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm11 == false
+				end
+			end
+		end
+	end
+
+end)
+
+ChiefWardeonOff.MouseButton1Click:connect(function()
+	_G.farm11 = false
+
+end)
+
+ChestTpOn.MouseButton1Click:connect(function()
+	_G.chest = true
+	while _G.chest do
+		wait(5)
+
+		local OriginalPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		local a = game.Workspace:GetChildren()
+		for i=1,#a do
+			if a[i].Name:lower():match("chest") then
+				b = false
+				repeat wait()
+					if a[i].Parent~=game.Workspace then
+						b = true
+					else
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a[i].CFrame
+					end
+				until b == true
+			end
+		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OriginalPos
+	end
+
+end)
+
+ChestTpOff.MouseButton1Click:connect(function()
+	_G.chest = false
+
+end)
+
+GorillaOff.MouseButton1Click:connect(function()
+	_G.farm15 = false
+
+
+end)
+
+BanditOn.MouseButton1Click:connect(function()
+	_G.farm13 = true
+	while _G.farm13 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Bandit [Lv. 5]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm13 == false
+				end
+			end
+		end
+	end
+
+end)
+
+BanditOff.MouseButton1Click:connect(function()
+	_G.farm13 = false
+
+
+end)
+
+MonkeysOn.MouseButton1Click:connect(function()
+	_G.farm14 = true
+	while _G.farm14 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Monkey [Lv. 14]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm14 == false
+				end
+			end
+		end
+	end
+
+end)
+
+MonkeysOff.MouseButton1Click:connect(function()
+	_G.farm14 = false
+
+
+end)
+
+GorillaOn.MouseButton1Click:connect(function()
+	_G.farm15 = true
+	while _G.farm15 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Gorilla [Lv. 20]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm15 == false
+				end
+			end
+		end
+	end
+
+end)
+
+MarineCaptainOn.MouseButton1Click:connect(function()
+	_G.farm16 = true
+	while _G.farm16 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Marine Captain [Lv. 120]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm16 == false
+				end
+			end
+		end
+	end
+
+end)
+
+MarineCaptainOff.MouseButton1Click:connect(function()
+	_G.farm16 = false
+
+
+end)
+
+ViceAdmiralOn.MouseButton1Click:connect(function()
+	_G.farm17 = true
+	while _G.farm17 do
+		wait(0)
+
+		for i,v in pairs(game.workspace.Enemies:GetChildren()) do
+			if v.Name == "Vice Admiral [Lv. 130] [Boss]" then
+				if v.Humanoid.Health > 0 then
+					repeat wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+					until v.Humanoid.Health == 0 or _G.farm17 == false
+				end
+			end
+		end
+	end
+
+end)
+
+ViceAdmiralOff.MouseButton1Click:connect(function()
+	_G.farm17 = false
+
+
+end)
