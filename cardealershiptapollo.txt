@@ -1,0 +1,64 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local farm = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.599012971, 0, 0.290909052, 0)
+Frame.Size = UDim2.new(0, 183, 0, 123)
+Frame.Active = true
+Frame.Draggable = true
+
+farm.Name = "farm"
+farm.Parent = Frame
+farm.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+farm.BorderSizePixel = 0
+farm.Position = UDim2.new(0.034153007, 0, 0.293683052, 0)
+farm.Size = UDim2.new(0, 168, 0, 35)
+farm.Font = Enum.Font.SourceSans
+farm.Text = "Autofarm"
+farm.TextColor3 = Color3.fromRGB(255, 255, 255)
+farm.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.202185795, 0, 0.00408166414, 0)
+TextLabel.Size = UDim2.new(0, 108, 0, 35)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "CDT"
+TextLabel.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.TextSize = 15.000
+TextLabel.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = Frame
+exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.0396175385, 0, 0.639059067, 0)
+exit.Size = UDim2.new(0, 168, 0, 36)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+exit.TextSize = 14.000
+
+exit.MouseButton1Click:connect(function()
+	Frame.Visible = false
+end)
+
+farm.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/dbVNaA9L'),true))()
+end)
