@@ -1,0 +1,241 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local aimbot = Instance.new("TextButton")
+local infinitej = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+local esp = Instance.new("TextButton")
+local hitbox = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.599012971, 0, 0.290909052, 0)
+Frame.Size = UDim2.new(0, 183, 0, 266)
+Frame.Active = true
+Frame.Draggable = true
+
+aimbot.Name = "aimbot"
+aimbot.Parent = Frame
+aimbot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+aimbot.BorderSizePixel = 0
+aimbot.Position = UDim2.new(0.034153007, 0, 0.133849099, 0)
+aimbot.Size = UDim2.new(0, 168, 0, 35)
+aimbot.Font = Enum.Font.SourceSans
+aimbot.Text = "Aimbot (lock on rigtc)"
+aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimbot.TextSize = 14.000
+
+infinitej.Name = "infinitej"
+infinitej.Parent = Frame
+infinitej.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+infinitej.BorderSizePixel = 0
+infinitej.Position = UDim2.new(0.0396174639, 0, 0.638791025, 0)
+infinitej.Size = UDim2.new(0, 168, 0, 37)
+infinitej.Font = Enum.Font.SourceSans
+infinitej.Text = "Infinite Jump"
+infinitej.TextColor3 = Color3.fromRGB(255, 255, 255)
+infinitej.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.202185795, 0, 0.0040816688, 0)
+TextLabel.Size = UDim2.new(0, 108, 0, 34)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Arsenal"
+TextLabel.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.TextSize = 15.000
+TextLabel.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = Frame
+exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.0396175385, 0, 0.814461231, 0)
+exit.Size = UDim2.new(0, 168, 0, 36)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+exit.TextSize = 14.000
+
+esp.Name = "esp"
+esp.Parent = Frame
+esp.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+esp.BorderSizePixel = 0
+esp.Position = UDim2.new(0.034153007, 0, 0.475351572, 0)
+esp.Size = UDim2.new(0, 168, 0, 34)
+esp.Font = Enum.Font.SourceSans
+esp.Text = "ESP"
+esp.TextColor3 = Color3.fromRGB(255, 255, 255)
+esp.TextSize = 14.000
+
+hitbox.Name = "hitbox"
+hitbox.Parent = Frame
+hitbox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+hitbox.BorderSizePixel = 0
+hitbox.Position = UDim2.new(0.0396174863, 0, 0.299364001, 0)
+hitbox.Size = UDim2.new(0, 168, 0, 37)
+hitbox.Font = Enum.Font.SourceSans
+hitbox.Text = "Hitbox"
+hitbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+hitbox.TextSize = 14.000
+
+aimbot.MouseButton1Click:connect(function()
+	getgenv().AimPart = "HumanoidRootPart" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}
+	getgenv().AimlockToggleKey = "Y" -- Toggles Aimbot On/Off 
+	getgenv().AimRadius = 50 -- How far away from someones character you want to lock on at
+	getgenv().ThirdPerson = false -- Locking onto someone in your Third Person POV
+	getgenv().FirstPerson = true -- Locking onto someone in your First Person POV
+	getgenv().TeamCheck = true -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
+	getgenv().PredictMovement = true -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
+	getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature 
+
+	loadstring(game:HttpGet("https://pastebin.com/raw/TUhQBPvB", true))()
+end)
+
+hitbox.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/bWEVxyPc'),true))()
+	wait(0.1)
+	loadstring(game:HttpGet(('https://pastebin.com/raw/S6yfBt6i'),true))()
+end)
+
+infinitej.MouseButton1Click:connect(function()
+	local Player = game:GetService'Players'.LocalPlayer;
+	local UIS = game:GetService'UserInputService';
+
+	_G.JumpHeight = 50;
+
+	function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+	UIS.InputBegan:connect(function(UserInput)
+		if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+			Action(Player.Character.Humanoid, function(self)
+				if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+					Action(self.Parent.HumanoidRootPart, function(self)
+						self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+					end)
+				end
+			end)
+		end
+	end)
+end)
+
+esp.MouseButton1Click:connect(function()
+	-- -----------------------------------
+	--  ___      _   _   _              --
+	-- / __| ___| |_| |_(_)_ _  __ _ ___--
+	-- \__ \/ -_)  _|  _| | ' \/ _` (_-<--
+	-- |___/\___|\__|\__|_|_||_\__, /__/--
+	--                         |___/    --
+	-- -----------------------------------
+	-- -----------------------------------
+	ALLYCOLOR = {0,161,0}  	--//Color of the ESP  of people on the same team
+	ENEMYCOLOR =  {255,0,0} 	--//Color of the ESP  of people on NOT the same team
+	TRANSPARENCY = 0.2			--//Transparency of the ESP
+	HEALTHBAR_ACTIVATED = false 	--//Renders the Healthbar
+	--
+	--
+
+	--							!!!Don't Change Anything Below Here Unless You Know What You're Doing!!!
+
+	function createFlex()
+		-- -----------------------------------------------------------------------------------
+		--[VARIABLES] //Changing may result in Errors!
+		players = game:GetService("Players") --//Required for PF
+		faces = {"Front","Back","Bottom","Left","Right","Top"} --//Every possible Enum face
+		currentPlayer = nil --//Used for the Team-Check
+		lplayer = players.LocalPlayer --//The LocalPlayer
+		-- -----------------------------------------------------------------------------------
+		players.PlayerAdded:Connect(function(p)
+			currentPlayer = p
+			p.CharacterAdded:Connect(function(character) --//For when a new Player joins the game 
+				createESP(character)			
+			end)		
+		end)
+		-- -----------------------------------------------------------------------------------
+		function checkPart(obj)  if (obj:IsA("Part") or obj:IsA("MeshPart")) and obj.Name~="HumanoidRootPart" then return true end end --//Check if the Part is suitable 
+		-- -----------------------------------------------------------------------------------
+		function actualESP(obj) 
+
+			for i=0,5 do
+				surface = Instance.new("SurfaceGui",obj) --//Creates the SurfaceGui
+				surface.Face = Enum.NormalId[faces[i+1]] --//Adjusts the Face and chooses from the face table
+				surface.AlwaysOnTop = true
+
+				frame = Instance.new("Frame",surface)	--//Creates the viewable Frame
+				frame.Size = UDim2.new(1,0,1,0)
+				frame.BorderSizePixel = 0												
+				frame.BackgroundTransparency = TRANSPARENCY
+				if currentPlayer.Team == players.LocalPlayer.Team then --//Checks the Players Team
+					frame.BackgroundColor3 = Color3.new(ALLYCOLOR[1],ALLYCOLOR[2],ALLYCOLOR[3])	--//If in same Team											
+				else
+					frame.BackgroundColor3 = Color3.new(ENEMYCOLOR[1],ENEMYCOLOR[2],ENEMYCOLOR[3])	--//If in another Team
+				end
+
+			end
+		end
+		-- -----------------------------------------------------------------------------------
+		function createHealthbar(hrp) 
+			board =Instance.new("BillboardGui",hrp) --//Creates the BillboardGui with HumanoidRootPart as the Parent
+			board.Name = "total"
+			board.Size = UDim2.new(1,0,1,0)
+			board.StudsOffset = Vector3.new(3,1,0)
+			board.AlwaysOnTop = true
+
+			bar = Instance.new("Frame",board) --//Creates the red background
+			bar.BackgroundColor3 = Color3.new(255,0,0)
+			bar.BorderSizePixel = 0
+			bar.Size = UDim2.new(0.2,0,4,0)
+			bar.Name = "total2"
+
+			health = Instance.new("Frame",bar) --//Creates the changing green Frame
+			health.BackgroundColor3 = Color3.new(0,255,0)
+			health.BorderSizePixel = 0
+			health.Size = UDim2.new(1,0,hrp.Parent.Humanoid.Health/100,0)
+			hrp.Parent.Humanoid.Changed:Connect(function(property) --//Triggers when any Property changed
+				hrp.total.total2.Frame.Size = UDim2.new(1,0,hrp.Parent.Humanoid.Health/100,0) --//Adjusts the size of the green Frame								
+			end)
+		end
+		-- -----------------------------------------------------------------------------------
+		function createESP(c) --//Checks and calls the proper function
+			bugfix = c:WaitForChild("Head") --// *Used so the children of the character arent nil.
+			for i,v in pairs(c:GetChildren()) do
+				if checkPart(v) then
+					actualESP(v)
+				end
+			end
+			if HEALTHBAR_ACTIVATED then --//If the user decided to
+				createHealthbar(c:WaitForChild("HumanoidRootPart")) --//Calls the function of the creation
+			end
+		end
+		-- -----------------------------------------------------------------------------------
+		for i,people in pairs(players:GetChildren())do
+			if people ~= players.LocalPlayer then
+				currentPlayer = people
+				--//Used for Players already in the Game
+				createESP(people.Character)
+				people.CharacterAdded:Connect(function(character)
+					createESP(character)			
+				end)
+			end
+		end
+		-- -----------------------------------------------------------------------------------
+	end --//End of the entire function
+
+	createFlex() --// Does exactly that :)
+end)
+
+exit.MouseButton1Click:connect(function()
+	Frame.Visible = false
+end)
