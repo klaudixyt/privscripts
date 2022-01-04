@@ -731,6 +731,7 @@ Antiafk_2.Font = Enum.Font.SourceSans
 Antiafk_2.Text = "Anti AFK"
 Antiafk_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Antiafk_2.TextSize = 14.000
+Antiafk_2.Visible = false
 
 Louge.Name = "Louge"
 Louge.Parent = Frame3
