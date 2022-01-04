@@ -29,4 +29,7 @@ if game.PlaceId == 537413528 then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/babft.txt"))()
 end
 
-
+if game.PlaceId == 286090429 then
+	wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/arsenalapollo.txt"))()
+end
