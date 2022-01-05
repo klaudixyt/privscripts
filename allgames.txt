@@ -48,3 +48,8 @@ if game.PlaceId == 7499189111 then
 	wait(1)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/encountersjage.txt"))()
 end
+
+if game.PlaceId == 292439477 then
+	wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/pfjager.txt"))()
+end
