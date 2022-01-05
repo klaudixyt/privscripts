@@ -43,3 +43,8 @@ if game.PlaceId == 2753915549 then
 	wait(1)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/BloxFruitsapollo.txt"))()
 end
+
+if game.PlaceId == 7499189111 then
+	wait(1)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/klaudixyt/privscripts/main/encountersjage.txt"))()
+end
