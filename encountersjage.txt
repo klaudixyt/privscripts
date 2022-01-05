@@ -1,0 +1,185 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local killaura = Instance.new("TextButton")
+local godmode = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+local infinitejumo = Instance.new("TextButton")
+local speed = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.536088884, 0, 0.575757563, 0)
+Frame.Size = UDim2.new(0, 183, 0, 251)
+Frame.Active = true
+Frame.Draggable = true
+
+
+killaura.Name = "killaura"
+killaura.Parent = Frame
+killaura.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+killaura.BorderSizePixel = 0
+killaura.Position = UDim2.new(0.0396174863, 0, 0.149074107, 0)
+killaura.Size = UDim2.new(0, 168, 0, 35)
+killaura.Font = Enum.Font.SourceSans
+killaura.Text = "Kill Aura"
+killaura.TextColor3 = Color3.fromRGB(255, 255, 255)
+killaura.TextSize = 14.000
+
+godmode.Name = "godmode"
+godmode.Parent = Frame
+godmode.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+godmode.BorderSizePixel = 0
+godmode.Position = UDim2.new(0.0396174863, 0, 0.314460903, 0)
+godmode.Size = UDim2.new(0, 168, 0, 35)
+godmode.Font = Enum.Font.SourceSans
+godmode.Text = "God Mode"
+godmode.TextColor3 = Color3.fromRGB(255, 255, 255)
+godmode.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.191256836, 0, 0.00557097793, 0)
+TextLabel.Size = UDim2.new(0, 110, 0, 36)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Encounters"
+TextLabel.TextColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.TextSize = 15.000
+TextLabel.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = Frame
+exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.0396174863, 0, 0.832512736, 0)
+exit.Size = UDim2.new(0, 168, 0, 35)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+exit.TextSize = 14.000
+
+infinitejumo.Name = "infinitejumo"
+infinitejumo.Parent = Frame
+infinitejumo.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+infinitejumo.BorderSizePixel = 0
+infinitejumo.Position = UDim2.new(0.0396174863, 0, 0.485214651, 0)
+infinitejumo.Size = UDim2.new(0, 168, 0, 35)
+infinitejumo.Font = Enum.Font.SourceSans
+infinitejumo.Text = "Injfinite Jump"
+infinitejumo.TextColor3 = Color3.fromRGB(255, 255, 255)
+infinitejumo.TextSize = 14.000
+
+speed.Name = "speed"
+speed.Parent = Frame
+speed.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+speed.BorderSizePixel = 0
+speed.Position = UDim2.new(0.0396174863, 0, 0.659157813, 0)
+speed.Size = UDim2.new(0, 168, 0, 35)
+speed.Font = Enum.Font.SourceSans
+speed.Text = "Speed"
+speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+speed.TextSize = 14.000
+
+godmode.MouseButton1Click:connect(function()
+	while wait() do
+		game:GetService("ReplicatedStorage").RemoteEvents.ReplicateGuardOn:FireServer()
+		end
+	end)
+
+killaura.MouseButton1Click:connect(function()
+	for i,v in pairs(game:service'Players':GetChildren()) do
+		if v.Name ~= game.Players.LocalPlayer.Name then
+			spawn(function()
+				while wait(3) do
+					for i = 1, 50 do
+						local A_1 = {
+							["char"] = game.Players.LocalPlayer.Character,
+							["direction"] = Vector3.new(-0.62660223245621, 0, -0.77933931350708),
+							["charName"] = "Poppy",
+							["charhit"] = v.Character,
+							["attackType"] = "Unique"
+						}
+						local Event = game:GetService("ReplicatedStorage").RemoteEvents.DamageRequest
+						Event:FireServer(A_1)
+					end
+				end
+			end)
+		end
+	end
+end)
+
+infinitejumo.MouseButton1Click:connect(function()
+	local Player = game:GetService'Players'.LocalPlayer;
+	local UIS = game:GetService'UserInputService';
+
+	_G.JumpHeight = 50;
+
+	function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+	UIS.InputBegan:connect(function(UserInput)
+		if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+			Action(Player.Character.Humanoid, function(self)
+				if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+					Action(self.Parent.HumanoidRootPart, function(self)
+						self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+					end)
+				end
+			end)
+		end
+	end)
+end)
+
+speed.MouseButton1Click:connect(function()
+	down = false
+	velocity = Instance.new("BodyVelocity")
+	velocity.maxForce = Vector3.new(100000, 0, 100000)
+	---vv Use that to change the speed v
+	local speed = 150
+	gyro = Instance.new("BodyGyro")
+	gyro.maxTorque = Vector3.new(100000, 0, 100000)
+
+	local hum = game.Players.LocalPlayer.Character.Humanoid
+
+	function onButton1Down(mouse)
+		down = true
+		velocity.Parent = game.Players.LocalPlayer.Character.UpperTorso
+		velocity.velocity = (hum.MoveDirection) * speed
+		gyro.Parent = game.Players.LocalPlayer.Character.UpperTorso
+		while down do
+			if not down then break end
+			velocity.velocity = (hum.MoveDirection) * speed
+			local refpos = gyro.Parent.Position + (gyro.Parent.Position - workspace.CurrentCamera.CoordinateFrame.p).unit * 5
+			gyro.cframe = CFrame.new(gyro.Parent.Position, Vector3.new(refpos.x, gyro.Parent.Position.y, refpos.z))
+			wait(0.1)
+		end
+	end
+
+	function onButton1Up(mouse)
+		velocity.Parent = nil
+		gyro.Parent = nil
+		down = false
+	end
+	--To Change the key in those 2 lines, replace the "q" with your desired key
+	function onSelected(mouse)
+		mouse.KeyDown:connect(function(k) if k:lower()=="q"then onButton1Down(mouse)end end)
+		mouse.KeyUp:connect(function(k) if k:lower()=="q"then onButton1Up(mouse)end end)
+	end
+
+	onSelected(game.Players.LocalPlayer:GetMouse())
+end)
+
+exit.MouseButton1Click:connect(function()
+	Frame.Visible = false
+end)
